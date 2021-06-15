@@ -62,20 +62,20 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-    let grade;
-    grade = (score/questions.length)*100; 
-    if (grade >= 80) {
+    let gradeQuiz;
+    gradeQuiz = (score/questions.length)*100; 
+    if (gradeQuiz >= 80) {
       status = "PASSED";
     }
     else {
       status = "FAILED";
     } 
-    console.log(`>>> OVERALL GRADE: ${grade}% (${score} of ${(questions.length)} responses correct)   <<<\n>>> STATUS:  ${status} <<<`);
+    console.log(`>>> OVERALL GRADE: ${gradeQuiz}% (${score} of ${(questions.length)} responses correct)   <<<\n>>> STATUS:  ${status} <<<`);
 
 //console.log("grade " + grade);
 //console.log("typeof " + typeof grade);
 
-    return grade;
+    return gradeQuiz;
 }
 
 function runProgram() {
