@@ -42,7 +42,7 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
      
-    grade= score/(questions.length)*100; 
+    grade= (score/questions.length)*100; 
     if (grade >= 80) {
       status = "PASSED"
     }
@@ -52,7 +52,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(`>>> OVERALL GRADE: ${grade}% (${score} of ${(questions.length)} responses correct)   <<<\n>>> STATUS:  ${status} <<<`);
 
 console.log("grade " + grade)
-    return (grade/100);
+    return grade;
 }
 
 function runProgram() {
