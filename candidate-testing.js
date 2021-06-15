@@ -26,7 +26,7 @@ function askQuestion() {
   //candidateAnswer = input.question(question);
   //
   for (let i = 0; i < questions.length; i++) {
-    candidateAnswers [i] = (input.question("\n"+questions[i]+" "));
+    candidateAnswers [i] = (input.question("\n" + (i+1) + ") " + questions[i]+" "));
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       score = score+1;
     }    
@@ -52,7 +52,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(`>>> OVERALL GRADE: ${grade}% (${score} of ${(questions.length)} responses correct)   <<<\n>>> STATUS:  ${status} <<<`);
 
 console.log("grade " + grade)
-    return grade;
+    return (grade/100);
 }
 
 function runProgram() {
