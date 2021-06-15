@@ -12,6 +12,7 @@ let questions = ["Who was the first American woman in space? ","True or false: 5
 let correctAnswers = ["Sally Ride","true","40","Trajectory","3"];
 let candidateAnswers = [];
 
+
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   candidateName = input.question("Enter your name: ");
