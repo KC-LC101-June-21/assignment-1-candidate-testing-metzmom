@@ -12,6 +12,7 @@ let questions = ["1) Who was the first American woman in space?", "2) True or fa
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 let score = 0;
+let grade;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -41,7 +42,7 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
      
-    let grade= score/(questions.length)*100; 
+    grade= score/(questions.length)*100; 
     if (grade >= 80) {
       status="PASSED"
     }
