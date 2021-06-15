@@ -40,7 +40,7 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-    let grade = 0;
+    let grade;
     grade = (score/questions.length)*100; 
     if (grade >= 80) {
       status = "PASSED";
@@ -52,6 +52,7 @@ function gradeQuiz(candidateAnswers) {
 
 console.log("grade " + grade);
 console.log("typeof " + typeof grade);
+
     return grade;
 }
 
