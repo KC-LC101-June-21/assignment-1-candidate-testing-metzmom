@@ -28,7 +28,7 @@ function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
     candidateAnswers [i] = (input.question("\n"+questions[i]+" "));
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      score=score+1
+      score = score+1;
     }    
     else {
       //console.log(`You are wrong! Your answer ${candidateAnswers} is not correct.`) 
@@ -44,7 +44,7 @@ function gradeQuiz(candidateAnswers) {
      
     grade= score/(questions.length)*100; 
     if (grade >= 80) {
-      status="PASSED"
+      status = "PASSED"
     }
     else {
       status = "FAILED"
