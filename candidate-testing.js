@@ -12,7 +12,6 @@ let questions = ["Who was the first American woman in space? ", "True or false: 
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 let score = 0;
-let grade = 0;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -28,7 +27,7 @@ function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
     candidateAnswers [i] = (input.question("\n" + (i+1) + ") " + questions[i]+" "));
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      score = score+1;
+      score = score + 1;
     }    
     else {
       //console.log(`You are wrong! Your answer ${candidateAnswers} is not correct.`) 
@@ -41,17 +40,18 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-     
-    grade= (score/questions.length)*100; 
+    let grade = 0;
+    grade = (score/questions.length)*100; 
     if (grade >= 80) {
-      status = "PASSED"
+      status = "PASSED";
     }
     else {
-      status = "FAILED"
+      status = "FAILED";
     } 
     console.log(`>>> OVERALL GRADE: ${grade}% (${score} of ${(questions.length)} responses correct)   <<<\n>>> STATUS:  ${status} <<<`);
 
-console.log("grade " + grade)
+console.log("grade " + grade);
+console.log("typeof " + typeof grade);
     return grade;
 }
 
