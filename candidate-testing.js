@@ -24,6 +24,8 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   //candidateAnswer = input.question(question);
   //
+  
+  /*
   for (let i = 0; i < questions.length; i++) {
     candidateAnswers[i] = (input.question("\n" + (i+1) + ") " + questions[i]+" "));
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
@@ -37,6 +39,26 @@ function askQuestion() {
      console.log();
   }   
 }
+*/
+
+  for (let i = 0; i < questions.length; i++) {
+    candidateAnswers[i] = (input.question("\n" + (i+1) + ") " + questions[i]+" "));
+
+    candidateAnswer = candidateAnswers[i].toLowerCase();
+    correctAnswer = correctAnswers[i].toLowerCase();
+
+    if (candidateAnswer === correctAnswer) {
+      score = score + 1;
+    }    
+    else {
+      //console.log(`You are wrong! Your answer ${candidateAnswers} is not correct.`) 
+    }
+     console.log(`Your Answer: ${candidateAnswers[i]}`);
+     console.log(`Correct Answer: ${correctAnswers[i]}`);
+     console.log();
+  }   
+}
+
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
